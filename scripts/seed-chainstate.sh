@@ -210,7 +210,7 @@ tar -xvf "${CHAINDATA_DEST}" -C "${SCRIPTPATH}/persistent-data/${NETWORK}/stacks
 
 log
 log "  Chowning data to ${CURRENT_USER}"
-chown -R ${CURRENT_USER} "${SCRIPTPATH}/persistent-data/${NETWORK}" || exit_error "${COLRED}Error${COLRESET} setting file permissions"
+chown -R ${CURRENT_USER:-root} "${SCRIPTPATH}/persistent-data/${NETWORK}" || exit_error "${COLRED}Error${COLRESET} setting file permissions"
 
 log
 log "Importing postgres data"
