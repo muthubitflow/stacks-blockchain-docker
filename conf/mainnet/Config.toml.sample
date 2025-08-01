@@ -18,6 +18,8 @@ peer_port = 8333
 [connection_options]
 auth_token = "1234"
 private_neighbors = false
+read_only_call_limit_read_count = 1500
+read_only_call_limit_read_length = 500000
 
 [[events_observer]]
 events_keys = ["stackerdb", "block_proposal", "burn_blocks"]
