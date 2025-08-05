@@ -5,6 +5,8 @@ services:
     shm_size: ${PG_SHMSIZE:-256MB}
     container_name: postgres
     restart: on-failure
+    ports:
+      - ${PG_PORT:-5432}:${PG_PORT:-5432}
     env_file:
       - ${SCRIPTPATH}/.env
     environment:
